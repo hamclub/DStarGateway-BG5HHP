@@ -40,6 +40,11 @@ export CPPFLAGS+= -DUSE_MQTT=1
 export LDFLAGS+= -lmosquitto
 endif
 
+ifeq ($(shell uname -s),Darwin)
+	export CPPFLAGS+= -I/opt/homebrew/include
+	export LDFLAGS+= -L/opt/homebrew/lib
+endif
+
 ifeq ($(USE_GPSD), 1)
 export CPPFLAGS+= -DUSE_GPSD
 export LDFLAGS+= -lgps
