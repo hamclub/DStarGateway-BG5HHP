@@ -53,7 +53,7 @@ void LogInitialise(unsigned int displayLevel, unsigned int mqttLevel)
 }
 
 bool LogInitialiseFile(bool daemon, const std::string& filePath, const std::string& fileRoot, unsigned int fileLevel, unsigned int displayLevel, bool utc) {
-	return;
+	return true;
 }
 
 void LogFinalise()
